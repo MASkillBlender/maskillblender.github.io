@@ -1,0 +1,22 @@
+Academicons v1 (https://github.com/jpswalsh/academicons)
+
+The upstream repository does not ship a standalone LICENSE file; the
+terms below are excerpted verbatim from the project's README.md
+"License" section.
+
+----------------------------------------------------------------------
+# License
+
+- The Academicons font is licensed under the SIL OFL 1.1:
+  - http://scripts.sil.org/OFL
+- Academicons CSS, LESS, and SASS files are licensed under the MIT
+  License:
+  - http://opensource.org/licenses/mit-license.html
+- The Academicons documentation is licensed under the CC BY 3.0
+  License:
+  - http://creativecommons.org/licenses/by/3.0/
+----------------------------------------------------------------------
+
+Only the font files (static/fonts/academicons.*) and the CSS
+(static/css/academicons.min.css) are vendored in this repository.
+Documentation is not redistributed.

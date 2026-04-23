@@ -1,0 +1,30 @@
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# Build artifacts and dependencies
+node_modules/
+.cache/
+dist/
+build/
+
+# Local-only configs and logs
+*.local
+*.log
+*.tmp
+
+# Python helper scripts
+__pycache__/
+*.pyc
+.venv/

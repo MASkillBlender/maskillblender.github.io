@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Project page for the paper Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <title>Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation</title>
+
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-2 publication-title">
+              Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Authors</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" tabindex="-1">
+                  <span class="icon" aria-hidden="true"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv (Coming&nbsp;Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" tabindex="-1">
+                  <span class="icon" aria-hidden="true"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (Coming&nbsp;Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" tabindex="-1">
+                  <span class="icon" aria-hidden="true"><i class="fab fa-youtube"></i></span>
+                  <span>Video (Coming&nbsp;Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" tabindex="-1">
+                  <span class="icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+                  <span>Code (Coming&nbsp;Soon)</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <figure class="image teaser-figure">
+        <img src="./assets/pictures/versatile_task.jpg" alt="" width="3331" height="1246"
+          loading="eager" decoding="async" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Coordinated multi-humanoid loco-manipulation is promising yet challenging due to high-dimensional
+              control, partial observability, and scalability issues. While recent reinforcement learning methods have
+              improved single-humanoid whole-body control, extending them to multi-humanoid settings remains nontrivial
+              and often requires substantial reward engineering or task-specific design.
+            </p>
+            <p>
+              We propose <strong translate="no">MASkillBlender</strong>, a general
+              centralized-training-decentralized-execution framework for learning coordinated loco-manipulation among
+              multiple humanoids. <span translate="no">MASkillBlender</span> equips each humanoid with a hierarchical
+              decentralized policy that blends a set of pretrained primitive skills, substantially reducing the policy
+              search space for coordinated whole-body loco-manipulation. To improve training efficiency, we further
+              introduce a permutation-based data augmentation method, and theoretically demonstrate that augmented
+              samples induce the same policy gradient as the original samples in homogeneous Markov games.
+            </p>
+            <p>
+              We evaluate <span translate="no">MASkillBlender</span> on three multi-humanoid coordination tasks across
+              two humanoid embodiments.
+              Extensive simulation results show that the learned decentralized policies successfully solve all tasks
+              and produce versatile coordinated behaviors across embodiments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Primitive Skills</h2>
+
+          <figure class="section-figure">
+            <img src="./assets/pictures/primitive_skill_library.jpg"
+              alt="Primitive skill library for Unitree H1 and Unitree G1 humanoid robots, each with Walking, Reaching, and Squatting skills"
+              width="3042" height="698" loading="lazy">
+            <figcaption class="section-figure-caption">
+              Primitive skill library for two humanoid embodiments,
+              <span translate="no">Unitree&nbsp;H1</span> and <span translate="no">Unitree&nbsp;G1</span>, which
+              contains three representative primitive skills,
+              <code translate="no">Walking</code>, <code translate="no">Reaching</code>, and
+              <code translate="no">Squatting</code>.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Walking <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/h1_walking.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Reaching <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/h1_reaching.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Squatting <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/h1_squatting.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Walking <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/g1_walking.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Reaching <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/g1_reaching.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Squatting <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/low_level_tasks/g1_squatting.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">High-level Tasks</h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Carry <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/h1_carry.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Push <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/h1_push.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Move <span translate="no">(H1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/h1_move.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Carry <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/g1_carry.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Push <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/g1_push.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Move <span translate="no">(G1)</span></h3>
+          <video autoplay controls muted loop playsinline>
+            <source src="./assets/videos/high_level_tasks/g1_move.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 has-text-centered">
+          <div class="content">
+            <p>
+              Page content released under
+              <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>;
+              vendored libraries retain their original licenses.
+            </p>
+            <p>
+              Built with
+              <a href="https://bulma.io/" translate="no">Bulma</a>,
+              <a href="https://fontawesome.com/" translate="no">Font&nbsp;Awesome</a>, and
+              <a href="https://jpswalsh.github.io/academicons/" translate="no">Academicons</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+# ============================================================
+#  Git Commit Message Template
+#  Project: MASkillBlender Project Page
+#  Usage: Automatically loaded by Git during `git commit`
+# ============================================================
+#
+# Format:
+#   <type>(<scope>): <subject>
+#
+# Example:
+#   content(abstract): refine paragraph wording
+#
+#   Tighten the second paragraph and emphasize the central claim.
+#
+# ------------------------------------------------------------
+# Commit Types:
+#   feat      - Add new feature or section
+#   fix       - Fix a bug or broken rendering
+#   docs      - Documentation or README
+#   style     - CSS or visual adjustments without behavior change
+#   refactor  - Restructure HTML or assets without content change
+#   chore     - Maintenance, cleanup, minor updates
+#   revert    - Revert previous commit
+#
+# ------------------------------------------------------------
+# Suggested Scopes:
+#   content   - Abstract, captions, or textual content
+#   layout    - HTML structure and section ordering
+#   style     - CSS and visual styling
+#   assets    - Images, videos, and other media
+#   meta      - <head>, SEO tags, favicon
+#   deps      - Vendored third-party libraries (Bulma, FontAwesome, etc.)
+#   deploy    - GitHub Pages configuration
+#   docs      - README and developer notes
+#   chore     - Maintenance and minor cleanup
+#
+# ------------------------------------------------------------
+# Template:
+<type>(<scope>): <subject>
+
+# Description: explain what and why changes were made.
+<body>
+
+# End of commit message
+# ============================================================
