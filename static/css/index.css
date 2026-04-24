@@ -263,7 +263,7 @@ figure.teaser-figure img {
 }
 
 @media (max-width: 768px) {
-  .columns.is-centered > .column.is-one-third {
+  .columns.is-centered > .column.video-card {
     flex: none;
     width: 100%;
   }
