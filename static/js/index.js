@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
   const videos = document.querySelectorAll("video");
   if (videos.length === 0 || !("IntersectionObserver" in window)) {
     return;
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduceMotion) {
     videos.forEach((video) => {
-      video.removeAttribute("autoplay");
       video.preload = "none";
       video.pause();
     });
@@ -29,4 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   videos.forEach((video) => observer.observe(video));
-});
+})();
