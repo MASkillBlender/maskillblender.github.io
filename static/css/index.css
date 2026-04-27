@@ -262,6 +262,12 @@ figure.teaser-figure img {
   border-radius: 2px;
 }
 
+@media (min-width: 769px) and (max-width: 1087px) {
+  .publication-title {
+    font-size: 1.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .columns.is-centered > .column.video-card {
     flex: none;
