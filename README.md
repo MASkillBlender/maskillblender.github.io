@@ -3,7 +3,7 @@
 Static project page for the paper
 **"Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation"**.
 
-Live site: https://MASkillBlender.github.io/
+Live site: https://maskillblender.github.io/
 
 ## Local preview
 
