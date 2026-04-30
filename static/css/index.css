@@ -263,7 +263,7 @@ figure.teaser-figure img {
   border-radius: var(--radius-hairline);
 }
 
-@media (min-width: 769px) and (max-width: 1087px) {
+@media (min-width: 769px) {
   .publication-title {
     font-size: 1.95rem;
   }
