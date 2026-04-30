@@ -65,11 +65,22 @@ body {
   padding-bottom: 1rem;
 }
 
+.hero .container.is-max-desktop {
+  container-type: inline-size;
+  container-name: hero;
+}
+
 .publication-title {
   margin-bottom: 1.25rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
   text-wrap: balance;
+  hyphens: manual;
+  overflow-wrap: normal;
+  font-size-adjust: 0.52;
+  /* Fallback for browsers without container query unit support; the next line wins where supported. */
+  font-size: 1.85rem;
+  font-size: clamp(1.55rem, 0.55rem + 3.4cqi, 1.85rem);
 }
 
 .publication-authors {
@@ -263,24 +274,24 @@ figure.teaser-figure img {
   border-radius: var(--radius-hairline);
 }
 
-@media (min-width: 769px) {
-  .publication-title {
-    font-size: 1.95rem;
-  }
-}
-
 @media (max-width: 768px) {
   .columns.is-centered > .column.video-card {
     flex: none;
     width: 100%;
-  }
-  .publication-title {
-    font-size: 1.55rem;
   }
   .hero {
     padding-top: 2rem;
   }
   .section {
     padding: 2rem 1rem;
+  }
+}
+
+/* Mobile font-size fallback for browsers without container query unit support. */
+@supports not (font-size: 1cqi) {
+  @media (max-width: 768px) {
+    .publication-title {
+      font-size: 1.55rem;
+    }
   }
 }
