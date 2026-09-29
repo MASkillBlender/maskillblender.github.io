@@ -10,8 +10,8 @@
 repository:
   # At most 350 characters. Mirrors the README tagline.
   description: >-
-    Project page for "Learning Decentralized Whole-Body Control for
-    Coordinated Multi-Humanoid Loco-Manipulation"
+    Project page for "MASkillBlender: Decentralized Whole-Body Coordination
+    for Multi-Humanoid Loco-Manipulation via Skill Blending"
 
   # Project website; empty when there is none.
   homepage: "https://maskillblender.github.io/"
