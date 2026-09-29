@@ -29,5 +29,5 @@ repository:
 # "Include in the home page" toggles. The Settings App cannot manage
 # these; set them by hand. Recorded here so the intended state is known.
 #   Releases:    shown
-#   Deployments: hidden
+#   Deployments: shown
 #   Packages:    shown
