@@ -149,6 +149,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.title.is-4.subsection-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted-color);
+}
+
 figure.teaser-figure,
 .section-figure {
   margin: 0 auto;

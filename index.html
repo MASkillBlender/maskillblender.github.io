@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Project page for the paper Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation.">
+    content="Project page for the paper MASkillBlender: Decentralized Whole-Body Coordination for Multi-Humanoid Loco-Manipulation via Skill Blending.">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#ffffff">
-  <title>Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation</title>
+  <title>MASkillBlender: Decentralized Whole-Body Coordination for Multi-Humanoid Loco-Manipulation via Skill Blending</title>
 
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
@@ -31,7 +31,8 @@
           <div class="column has-text-centered">
 
             <h1 class="title is-2 publication-title">
-              Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid Loco-Manipulation
+              <span translate="no">MASkillBlender</span>: Decentralized Whole-Body Coordination for
+              Multi-Humanoid Loco-Manipulation via Skill Blending
             </h1>
 
             <div class="is-size-5 publication-authors">
@@ -81,59 +82,77 @@
       <figure class="image teaser-figure">
         <img src="./assets/pictures/versatile_task.jpg"
           alt="Overview of versatile coordinated multi-humanoid loco-manipulation tasks across Unitree H1 and G1 embodiments."
-          width="3331" height="1246" loading="eager" decoding="async" fetchpriority="high">
+          width="2776" height="1038" loading="eager" decoding="async" fetchpriority="high">
       </figure>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="abstract">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-full">
           <h2 class="title is-3">Abstract</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
           <div class="content has-text-justified">
             <p>
-              Coordinated multi-humanoid loco-manipulation is promising yet challenging due to high-dimensional
-              control, partial observability, and scalability issues. While recent reinforcement learning methods have
-              improved single-humanoid whole-body control, extending them to multi-humanoid settings remains nontrivial
-              and often requires substantial reward engineering or task-specific design.
-            </p>
-            <p>
-              We propose <strong translate="no">MASkillBlender</strong>, a general
-              centralized-training-decentralized-execution framework for learning coordinated loco-manipulation among
-              multiple humanoids. <span translate="no">MASkillBlender</span> equips each humanoid with a hierarchical
-              decentralized policy that blends a set of pretrained primitive skills, which substantially reduces the
-              policy search space while preserving the ability to generate diverse whole-body loco-manipulation
-              behaviors. To improve learning efficiency, we further introduce a permutation-based data augmentation
-              method, and theoretically demonstrate that augmented samples induce the same policy gradient as the
-              original samples in homogeneous Markov games.
-            </p>
-            <p>
-              We evaluate <span translate="no">MASkillBlender</span> on three multi-humanoid coordination tasks across
-              two humanoid embodiments.
-              Extensive simulation results demonstrate that the proposed framework achieves strong performance across
-              all tasks and produces versatile coordinated behaviors across different humanoid embodiments.
+              Coordinated multi-humanoid loco-manipulation is promising yet challenging due to
+              high-dimensional whole-body control, decentralized decision making, and scalability. While
+              recent reinforcement learning methods have improved single-humanoid whole-body control,
+              extending them to the multi-humanoid setting remains nontrivial and often requires substantial
+              reward engineering or task-specific design. We propose
+              <strong translate="no">MASkillBlender</strong>, a general multi-agent reinforcement learning
+              framework to achieve decentralized multi-humanoid whole-body coordination. By learning a shared
+              decentralized high-level policy over reusable pre-trained single-humanoid skills,
+              <span translate="no">MASkillBlender</span> enables coordinated behaviors using only task-level
+              rewards, without requiring task-specific motion references. To improve learning efficiency, we
+              further introduce a permutation-based data augmentation strategy for homogeneous multi-humanoid
+              systems, and theoretically show that the permuted samples preserve the policy-gradient direction
+              of the original samples under the homogeneous Markov game formulation. We evaluate
+              <span translate="no">MASkillBlender</span> on multiple multi-humanoid coordination tasks across
+              two humanoid embodiments. Simulation results demonstrate that the proposed framework
+              consistently achieves strong task performance and enables coordinated behaviors across different
+              tasks and humanoid embodiments.
             </p>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="primitive-skills">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <h2 class="title is-3">Primitive Skills</h2>
-
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              <span translate="no">MASkillBlender</span> builds its decentralized whole-body control policy
+              upon a reusable library of task-agnostic primitive skills. We consider three primitive skills,
+              <code translate="no">Walking</code>, <code translate="no">Reaching</code>, and
+              <code translate="no">Squatting</code>, which provide basic motor capabilities for downstream
+              multi-humanoid coordination. The primitive skills are pre-trained separately and kept fixed
+              during downstream policy training.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
           <figure class="section-figure">
             <img src="./assets/pictures/primitive_skill_library.jpg"
               alt="Primitive skill library for Unitree H1 and Unitree G1 humanoid robots, each with Walking, Reaching, and Squatting skills"
               width="3042" height="698" loading="lazy">
             <figcaption class="section-figure-caption">
-              Primitive skill library for two humanoid embodiments,
-              <span translate="no">Unitree&nbsp;H1</span> and <span translate="no">Unitree&nbsp;G1</span>, which
-              contains three representative primitive skills,
+              Primitive skill library for the <span translate="no">Unitree&nbsp;H1</span> and
+              <span translate="no">Unitree&nbsp;G1</span>. The library contains three task-agnostic primitive skills:
               <code translate="no">Walking</code>, <code translate="no">Reaching</code>, and
               <code translate="no">Squatting</code>.
             </figcaption>
@@ -145,19 +164,19 @@
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Walking <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/h1_walking.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/h1_walking.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Reaching <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/h1_reaching.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/h1_reaching.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Squatting <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/h1_squatting.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/h1_squatting.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -166,79 +185,264 @@
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Walking <span translate="no">(G1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/g1_walking.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/g1_walking.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Reaching <span translate="no">(G1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/g1_reaching.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/g1_reaching.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Squatting <span translate="no">(G1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/low_level_tasks/g1_squatting.mp4" type="video/mp4">
+            <source src="./assets/videos/primitive_skills/g1_squatting.mp4" type="video/mp4">
           </video>
         </div>
       </div>
-
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="coordination-tasks">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <h2 class="title is-3">High-level Tasks</h2>
+          <h2 class="title is-3">Multi-Humanoid Coordination Tasks</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We evaluate <span translate="no">MASkillBlender</span> on three representative multi-humanoid
+              coordination tasks: Carry, Push, and Move. In
+              Carry, two humanoids collaboratively transport a large box to a target position. In Push, two
+              humanoids collaboratively push a heavy box toward a target position. In Move, three humanoids
+              move toward their assigned targets while avoiding inter-humanoid collisions.
+            </p>
+          </div>
         </div>
       </div>
 
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h3 class="title is-4 subsection-title" translate="no">Unitree H1</h3>
+        </div>
+      </div>
       <div class="columns is-centered">
-        <div class="column is-half video-card">
+        <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Carry <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/h1_carry.mp4" type="video/mp4">
+            <source src="./assets/videos/coordination_tasks/h1_carry.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="column is-half video-card">
-          <h3 class="title is-5 video-caption">Carry <span translate="no">(G1)</span></h3>
-          <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/g1_carry.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="columns is-centered">
-        <div class="column is-half video-card">
+        <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Push <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/h1_push.mp4" type="video/mp4">
+            <source src="./assets/videos/coordination_tasks/h1_push.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="column is-half video-card">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Move <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/coordination_tasks/h1_move.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h3 class="title is-4 subsection-title" translate="no">Unitree G1</h3>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We further evaluate the same coordination tasks on the 21-DoF
+              <span translate="no">Unitree&nbsp;G1</span> to examine the applicability of
+              <span translate="no">MASkillBlender</span> across different humanoid embodiments.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Carry <span translate="no">(G1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/coordination_tasks/g1_carry.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
           <h3 class="title is-5 video-caption">Push <span translate="no">(G1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/g1_push.mp4" type="video/mp4">
+            <source src="./assets/videos/coordination_tasks/g1_push.mp4" type="video/mp4">
           </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption">Move <span translate="no">(G1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/coordination_tasks/g1_move.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="teamhoi-comparison">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Comparison with <span translate="no">TeamHOI</span></h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We compare <span translate="no">MASkillBlender</span> with an adapted
+              <span translate="no">TeamHOI</span> baseline on the <span translate="no">Unitree&nbsp;H1</span>
+              tasks. The task environments and task-level information are kept consistent across methods
+              whenever possible, while <span translate="no">TeamHOI</span> retains its reference-based PPO/AMP
+              training paradigm and Transformer policy architecture. The following videos show representative
+              <span translate="no">TeamHOI</span> rollouts corresponding to the
+              <span translate="no">MASkillBlender</span> results shown above.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption"><span translate="no">TeamHOI</span>: Carry <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/teamhoi_baseline/h1_carry.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption"><span translate="no">TeamHOI</span>: Push <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/teamhoi_baseline/h1_push.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-one-third video-card">
+          <h3 class="title is-5 video-caption"><span translate="no">TeamHOI</span>: Move <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/teamhoi_baseline/h1_move.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="box-exchange">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Two-Humanoid Box Exchange</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              To extend the evaluation beyond the manipulation of a single large shared object, we introduce a
+              two-humanoid box-exchange task on <span translate="no">Unitree&nbsp;H1</span>. Two humanoids
+              stand on opposite sides of a table and first move their assigned boxes to an exchange region.
+              After the stage transition, they exchange box assignments and move the received boxes to the
+              corresponding final target positions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-two-thirds video-card">
+          <h3 class="title is-5 video-caption">Two-Humanoid Box Exchange <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/box_exchange/h1_transfer.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="long-horizon">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Long-Horizon Coordination from Asymmetric Initial Configurations</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We further evaluate long-horizon execution from asymmetric initial configurations. The humanoids
+              first use pre-trained primitive skills to approach predefined poses near the object. If one
+              humanoid arrives earlier, it waits until the other is ready. The learned decentralized Carry or
+              Push policy is then activated for coordinated object manipulation. No additional training of the
+              coordination policy is required for these demonstrations.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="columns is-centered">
         <div class="column is-half video-card">
-          <h3 class="title is-5 video-caption">Move <span translate="no">(H1)</span></h3>
+          <h3 class="title is-5 video-caption">Long-Horizon Carry <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/h1_move.mp4" type="video/mp4">
+            <source src="./assets/videos/long_horizon/h1_carry.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-half video-card">
-          <h3 class="title is-5 video-caption">Move <span translate="no">(G1)</span></h3>
+          <h3 class="title is-5 video-caption">Long-Horizon Push <span translate="no">(H1)</span></h3>
           <video controls muted loop playsinline preload="metadata">
-            <source src="./assets/videos/high_level_tasks/g1_move.mp4" type="video/mp4">
+            <source src="./assets/videos/long_horizon/h1_push.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="section" id="sim2sim">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3"><span translate="no">Sim2Sim</span> Transfer</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              We evaluate the cross-simulator transferability of <span translate="no">MASkillBlender</span> by
+              deploying the learned <span translate="no">Unitree&nbsp;H1</span> policies from
+              <span translate="no">NVIDIA Isaac Gym</span> to <span translate="no">MuJoCo</span>. For Carry,
+              due to the sensitivity of contact-rich object manipulation, the <span translate="no">Isaac
+              Gym</span> policy is briefly continued under broader domain randomization before deployment. For
+              Move, the policy is transferred directly to <span translate="no">MuJoCo</span> without
+              additional training.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-half video-card">
+          <h3 class="title is-5 video-caption">Carry in <span translate="no">MuJoCo</span> <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/sim2sim/h1_carry_mujoco.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half video-card">
+          <h3 class="title is-5 video-caption">Move in <span translate="no">MuJoCo</span> <span translate="no">(H1)</span></h3>
+          <video controls muted loop playsinline preload="metadata">
+            <source src="./assets/videos/sim2sim/h1_move_mujoco.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
     </div>
   </section>
 
