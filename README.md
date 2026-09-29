@@ -22,11 +22,11 @@
 
 Static source of the MASkillBlender project page, served by GitHub Pages at
 [maskillblender.github.io](https://maskillblender.github.io/). The page
-presents the paper's abstract, the primitive skill library, and videos of
-primitive skills, multi-humanoid coordination tasks, a TeamHOI baseline
-comparison, box exchange, long-horizon coordination, and Sim2Sim transfer on
-H1 and G1 humanoids. It is plain HTML, CSS, and JavaScript with vendored
-libraries, so there is nothing to build.
+presents the paper's abstract, the framework overview, the primitive skill
+library, and videos of primitive skills, multi-humanoid coordination tasks,
+a TeamHOI baseline comparison, box exchange, long-horizon coordination, and
+Sim2Sim transfer on H1 and G1 humanoids. It is plain HTML, CSS, and
+JavaScript with vendored libraries, so there is nothing to build.
 
 ## ✨ Highlights
 
@@ -61,7 +61,7 @@ Open the folder in VS Code and use the Live Server extension: right-click
 | `static/css/index.css`, `static/js/index.js` | The page's own style and script |
 | `static/css`, `static/js`, `static/webfonts`, `static/fonts` | Vendored Bulma, Font Awesome, Academicons |
 | `static/third_party_licenses/` | Licenses of the vendored libraries |
-| `assets/pictures/` | Teaser image and primitive skill library figure |
+| `assets/pictures/` | Teaser image, framework figure, and primitive skill library figure |
 | `assets/videos/` | Videos, one folder per page section |
 | `AGENTS.md`, `.agents/skills/` | Instructions and skills for AI coding agents |
 | `.gitmessage`, `.gitattributes`, `.gitignore` | Commit format, line endings, ignore rules |
