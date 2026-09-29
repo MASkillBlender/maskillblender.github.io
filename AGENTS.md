@@ -6,8 +6,9 @@ file is the single source of instructions; edit it, never an adapter file.
 ## Project
 
 MASkillBlender Project Page: the static GitHub Pages site for the paper
-"Learning Decentralized Whole-Body Control for Coordinated Multi-Humanoid
-Loco-Manipulation", served at https://maskillblender.github.io/.
+"MASkillBlender: Decentralized Whole-Body Coordination for Multi-Humanoid
+Loco-Manipulation via Skill Blending", served at
+https://maskillblender.github.io/.
 
 - `index.html` is the whole page; `static/js/index.js` and
   `static/css/index.css` hold the page's own script and style.
